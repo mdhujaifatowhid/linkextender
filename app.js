@@ -22,7 +22,7 @@ let currentLanguage = "bn";
 linkForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const originalUrl = urlInput.value.trim();
+    let originalUrl = urlInput.value.trim();
     const customValue = customInput.value.trim();
 
     if (!originalUrl) {
@@ -30,8 +30,17 @@ linkForm.addEventListener("submit", async function (event) {
     }
 
     if (!/^https?:\/\//i.test(originalUrl)) {
-                originalUrl = "https://" + originalUrl;
-            }
+        originalUrl = "https://" + originalUrl;
+    }
+
+    try {
+        new URL(originalUrl);
+    } catch {
+        alert(
+            currentLanguage === "bn"
+                ? "সঠিক URL দিন।"
+                : "Please enter a valid URL."
+        );
 
         return;
     }
