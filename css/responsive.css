@@ -1,0 +1,117 @@
+@media (max-width: 768px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 45px 25px 40px;
+        border-radius: 20px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .header p {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+
+    .language-switch {
+        gap: 14px;
+        font-size: 19px;
+        margin-bottom: 45px;
+    }
+
+    .switch {
+        width: 95px;
+        height: 44px;
+    }
+
+    .slider::before {
+        width: 34px;
+        height: 34px;
+        top: 5px;
+        left: 5px;
+    }
+
+    .switch input:checked + .slider::before {
+        transform: translateX(51px);
+    }
+
+    .input-group input {
+        height: 65px;
+        padding: 0 20px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+    .custom-link {
+        height: auto;
+        min-height: 65px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 8px;
+        border-radius: 15px;
+    }
+
+    .custom-link span {
+        padding-left: 10px;
+        font-size: 16px;
+    }
+
+    .custom-link input {
+        width: 100%;
+        height: 48px;
+        margin: 0;
+        font-size: 17px;
+    }
+
+    #submitButton {
+        height: 65px;
+        font-size: 21px;
+        border-radius: 15px;
+    }
+
+    .terms {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    .result-box {
+        flex-direction: column;
+    }
+
+    .result-box input {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .result-box button {
+        width: 100%;
+        height: 55px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .card {
+        padding: 35px 18px 30px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 17px;
+    }
+
+    .language-switch {
+        font-size: 17px;
+    }
+}

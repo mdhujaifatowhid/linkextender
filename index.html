@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ছোট লিংক বড় করুন</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <main class="page">
+        <section class="card">
+
+            <header class="header">
+                <h1 id="title">ছোট লিংক বড় করুন</h1>
+                <p id="subtitle">যে কোন ছোট লিংক অতি দ্রুত বড় করুন!</p>
+            </header>
+
+            <div class="language-switch">
+                <span id="banglaText">বাংলা</span>
+
+                <label class="switch">
+                    <input type="checkbox" id="languageToggle">
+                    <span class="slider"></span>
+                </label>
+
+                <span id="englishText">English</span>
+            </div>
+
+            <form id="linkForm">
+
+                <div class="input-group">
+                    <input
+                        type="url"
+                        id="urlInput"
+                        placeholder="ছোট লিংকটি এখানে পেস্ট করুন"
+                        required
+                    >
+                </div>
+
+                <div class="custom-link">
+                    <span>linkextender.vercel.app/go/</span>
+
+                    <input
+                        type="text"
+                        id="customInput"
+                        placeholder="কাস্টম লিংক"
+                        maxlength="30"
+                    >
+                </div>
+
+                <button type="submit" id="submitButton">
+                    লিংক তৈরি করুন
+                </button>
+
+            </form>
+
+            <div class="loading" id="loading">
+                <span id="loadingText">অপেক্ষা করুন...</span>
+            </div>
+
+            <section class="result" id="result">
+
+                <p class="result-title" id="resultTitle">
+                    আপনার বড় লিংক প্রস্তুত!
+                </p>
+
+                <div class="result-box">
+                    <input type="text" id="resultInput" readonly>
+
+                    <button id="copyButton">
+                        Copy
+                    </button>
+                </div>
+
+                <p class="copy-status" id="copyStatus"></p>
+
+            </section>
+
+            <p class="terms" id="terms">
+                By clicking Extend Link, You agree with our
+                <a href="#" id="termsLink">Terms of Service</a>.
+            </p>
+
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
