@@ -12,10 +12,15 @@ export default async function handler(req, res) {
         return res.status(400).send("Invalid link");
     }
 
+    const actualSlug = slug.replace(
+        "-this-link-is-now-much-longer",
+        ""
+    );
+
     const { data, error } = await supabase
         .from("links")
         .select("original_url")
-        .eq("slug", slug)
+        .eq("slug", actualSlug)
         .single();
 
     if (error || !data) {
