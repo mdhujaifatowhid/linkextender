@@ -29,14 +29,9 @@ linkForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    try {
-        new URL(originalUrl);
-    } catch {
-        alert(
-            currentLanguage === "bn"
-                ? "সঠিক URL দিন।"
-                : "Please enter a valid URL."
-        );
+    if (!/^https?:\/\//i.test(originalUrl)) {
+                originalUrl = "https://" + originalUrl;
+            }
 
         return;
     }
