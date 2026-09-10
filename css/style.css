@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     background: #ffffff;
     color: #202b35;
-    font-family: "Noto Sans Bengali", Arial, Helvetica, sans-serif;
+    font-family: "Tiro Bangla", Arial, Helvetica, sans-serif;
 }
 
 .page {
