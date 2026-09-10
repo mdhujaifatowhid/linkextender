@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/go/:slug*",
+            "destination": "/api/redirect?slug=:slug*"
+        }
+    ]
+}
