@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ছোট লিংক বড় করুন</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -58,11 +57,11 @@
 
             </form>
 
-            <div class="loading" id="loading">
+            <div class="loading" id="loading" style="display: none;">
                 <span id="loadingText">অপেক্ষা করুন...</span>
             </div>
 
-            <section class="result" id="result">
+            <section class="result" id="result" style="display: none;">
 
                 <p class="result-title" id="resultTitle">
                     আপনার বড় লিংক প্রস্তুত!
@@ -71,7 +70,7 @@
                 <div class="result-box">
                     <input type="text" id="resultInput" readonly>
 
-                    <button id="copyButton">
+                    <button id="copyButton" type="button">
                         Copy
                     </button>
                 </div>
