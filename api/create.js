@@ -5,7 +5,7 @@ const supabase = createClient(
     process.env.SUPABASE_SECRET_KEY
 );
 
-function generateSlug(length = 8) {
+function generateSlug(length = 16) {
     const characters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -20,6 +20,19 @@ function generateSlug(length = 8) {
     }
 
     return slug;
+}
+
+const EXTEND_SUFFIXES = [
+    "this-link-is-now-much-longer-than-it-ever-used-to-be-and-keeps-getting-longer",
+    "this-link-has-been-extended-and-is-now-significantly-longer-than-before-and-honestly-still-growing",
+    "wow-this-link-got-so-much-bigger-than-it-used-to-be-and-somehow-it-just-keeps-expanding-forever",
+    "congratulations-your-link-is-now-officially-longer-than-anyone-ever-expected-it-to-become",
+    "this-used-to-be-a-tiny-link-but-not-anymore-because-now-it-is-basically-an-entire-sentence",
+];
+
+function getRandomSuffix() {
+    const index = Math.floor(Math.random() * EXTEND_SUFFIXES.length);
+    return EXTEND_SUFFIXES[index];
 }
 
 export default async function handler(req, res) {
@@ -83,8 +96,10 @@ export default async function handler(req, res) {
     const baseUrl =
         `${req.headers["x-forwarded-proto"] || "https"}://${req.headers.host}`;
 
+    const suffix = getRandomSuffix();
+
     const extendedUrl =
-        `${baseUrl}/go/${slug}-this-link-is-now-much-longer`;
+        `${baseUrl}/go/${slug}-${suffix}`;
 
     return res.status(200).json({
         url: extendedUrl
